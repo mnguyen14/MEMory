@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const userData = require('./userData');
+const userData = require('./UserModelData');
 const entryData = require('./entryData');
 
 const seedDb = async() => {
