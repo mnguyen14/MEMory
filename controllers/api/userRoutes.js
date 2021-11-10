@@ -4,6 +4,17 @@ const withAuth = require('../../utils/auth');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+router.get('/', (req, res) => {
+    User.findAll({
+        attributes: { exclude: ['password'] }
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
