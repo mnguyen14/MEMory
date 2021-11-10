@@ -1,12 +1,27 @@
 const router = require('express').Router();
-const { User } = require('../../models');
-const withAuth = require('../../utils/auth');
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const { User, Entry } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.get('/:id', (req, res) => {
+    User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+            id: req.params.id
+        },
+        include: [{
+            model: Entry,
+            attributes: ['title', 'text', 'date']
+        }]
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
