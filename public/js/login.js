@@ -1,16 +1,17 @@
-const { response } = require("express");
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
 
-    const email = document.querySelector().value.trim();
-    const password = document.querySelector().value.trim();
+    const email = document.querySelector('#exampleInputEmail1').value.trim();
+    const password = document.querySelector('#exampleInputPassword1').value.trim();
 
     if (email && password) {
-        const response = await fetch();
-
-
+        const response = await fetch('/api/users/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Content-type': 'application/json' }
+        });
 
 
         if (response.ok) {
@@ -23,5 +24,5 @@ const loginFormHandler = async (event) => {
 
 
 document
-        .querySelector();
-        .addEventListener();
+  .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
