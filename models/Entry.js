@@ -31,13 +31,6 @@ Entry.init(
                 key: 'id'
             },
         },
-        journal_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'journal',
-                key: 'id'
-            },
-        },
     },
     {
         sequelize,
