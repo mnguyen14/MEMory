@@ -1,11 +1,11 @@
-const { response } = require("express");
+
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
 
-    const email = document.querySelector().value.trim();
-    const password = document.querySelector().value.trim();
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
         const response = await fetch();
@@ -23,5 +23,5 @@ const loginFormHandler = async (event) => {
 
 
 document
-        .querySelector();
-        .addEventListener();
+    .querySelector('.login-form')
+        .addEventListener('submit', loginFormHandler);
