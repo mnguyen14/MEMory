@@ -1,5 +1,3 @@
-
-
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -9,9 +7,6 @@ const loginFormHandler = async (event) => {
 
     if (email && password) {
         const response = await fetch();
-
-
-
 
         if (response.ok) {
             document.location.replace('/');
@@ -24,4 +19,4 @@ const loginFormHandler = async (event) => {
 
 document
     .querySelector('.login-form')
-        .addEventListener('submit', loginFormHandler);
+    .addEventListener('submit', loginFormHandler);
