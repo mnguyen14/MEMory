@@ -7,7 +7,6 @@ body {
 .form-control {
 	height: 40px;
 	box-shadow: none;
-	color: #ffffff;
 }
 .form-control:focus {
 	border-color: #5cb85c;
@@ -60,9 +59,7 @@ body {
 .signup-form .form-group {
 	margin-bottom: 20px;
 }
-.signup-form input[type="checkbox"] {
-	margin-top: 3px;
-}
+
 .signup-form .btn {        
 	font-size: 16px;
 	font-weight: bold;		
