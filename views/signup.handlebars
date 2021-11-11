@@ -1,23 +1,37 @@
-<form class="form-signup">
-    <div class="form group">
-        <label for="user-login">Name</label>
-        <input class="form-input" type="text" id="user-login" />
-    </div>
-    <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-    </div>
-    <div class="form-group">
-        <label for="password-login">Password</label>
-        <input class="form-input" type="password" id="password-signup" />
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="enter">Sign Up</button>
-    </div>
-</form>
+<link rel="stylesheet" href="./css/signup.css">
 
-<footer>
-    
-</footer>
+<div class="bk-color">
+    <form class="form-signup">
+        <div class="signup-form">
+            <form action="/examples/actions/confirmation.php" method="post">
+                <h2>Sign Up</h2>
+                <p class="hint-text">Create your account today to start your journal entry! It's free and only takes a
+                    minute.</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="name" placeholder="Name" required="required"
+                                id="user-name">
+                        </div>
 
-<script scr="/signup/js."
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required="required"
+                        id="email-signup">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Password"
+                        required="required" id="password-signup">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Sign up Now</button>
+                </div>
+            </form>
+        </div>
+    </form>
+</div>
+
+
+<script src="./js/signup.js"></script>
