@@ -1,4 +1,4 @@
-const User = require('./User');
+const User = require('./UserModel');
 const Entry = require('./Entry');
 
 

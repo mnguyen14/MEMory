@@ -1,12 +1,9 @@
-/* html {
-    background: rgb(202, 202, 202);
-} */
+body {
+	background-image: url("../images/backgroundimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-/* body {
-	color: rgb(255, 255, 255);
-	background: #ffffff;
-	font-family: 'Roboto', sans-serif;
-} */
 .form-control {
 	height: 40px;
 	box-shadow: none;
@@ -26,7 +23,7 @@
     margin-top: 20vh;
 }
 .signup-form h2 {
-	color: #474747;
+	color: white;
 	margin: 0 0 15px;
 	position: relative;
 	text-align: center;
@@ -48,7 +45,7 @@
 	right: 0;
 }
 .signup-form .hint-text {
-	color: #474747;
+	color: white;
 	margin-bottom: 30px;
 	text-align: center;
 }
@@ -91,8 +88,4 @@
 }	
 .signup-form form a:hover {
 	text-decoration: underline;
-}
-
-.bk-color {
-	background: rgb(202, 202, 202)
 }

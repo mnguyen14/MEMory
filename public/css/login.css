@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+body {
+    background-image: url("../images/backgroundimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+#title {
+    font-size: 70px;
+    font-weight: bolder;
+    color: #3b5998;
+}
+
+#subtext {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 30px;
+    color: white;
+}
+
+#textpitch {
+    font-size: 33px;
+    color: white;
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+}
+
+.form-control {
+    margin: 10px 0;
+}
+
+#submitBtn {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
