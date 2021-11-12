@@ -39,7 +39,7 @@ You will then be sent the homepage where you can create a new journal entry or v
 
 ![MEMory homepage](https://i.gyazo.com/0cb64e8a6cb0bc56d33567b676e1d1b3.png)
 
-When you click on one of the entries in the entry history, the entry will appear and you will be able to read it. You will also have the option to delete it.
+For now it isn't working, but in future development we when you click on one of the entries in the entry history, the entry will appear and you will be able to read it. You will also have the option to delete it.
 
 Upon clicking "+ New Entry" you will be sent to a page where you can create a new entry:
 
@@ -50,6 +50,24 @@ A title and text inside the text box is required to submit the journal entry. Yo
 ![MEMory sample prompts](https://i.gyazo.com/e9294038af1947ee68d65d0e1022ab28.png)
 
 After submitting the journal entry, it will load into your "Entry History" on the homepage where you can view or delete it.
+
+Though the links do not work on our website, we were still able to get our app working on Insomnia. You can sign up, log in, and create, view, and delete entries. 
+
+![Insomnia sign up](https://i.gyazo.com/92a098d7f5e8e9600186a0f46d3e6815.png)
+
+![Insomnia get user](https://i.gyazo.com/307d04222289086db8e1ee704da1bb12.png)
+
+![Insomnia log in](https://i.gyazo.com/42356bdcb8afb7d6008aceab0ad84fa1.png)
+
+After logging in you can create an entry.
+
+![Insomnia log in](https://i.gyazo.com/03c8f02b2da5cb6a73c9aa21af9b1608.png)
+
+You can see that the entry is made and it belongs to user_id: 4, Dan.
+
+![Insomnia get user](https://i.gyazo.com/4b1a60f4be789453b136895208723df7.png)
+
+When doing a GET on a user, you can see the user's name, email, and their entries. It shows the entry title, text, and the date it was created. 
 
 ## License
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
