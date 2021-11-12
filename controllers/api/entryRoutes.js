@@ -1,50 +1,53 @@
 const router = require('express').Router();
-const { Entry } = require('../../models')
+const { Entry, User } = require('../../models')
 
-router.post('/', async (req, res) => {
-
-    try {
-        const userEntry = await Entry.create(
-            {
-                title: req.body.title,
-                text: req.body.text,
-                date: req.body.date,
-                user: req.body.user_id
-            }
-        );
-
-        res.status(200).json({ message: 'Your entry has posted' })
-
-    } catch (err) {
-        res.status(500).json({ message: 'Journal entry failed' });
-    }
-
+router.get('/', async (req, res) => {
+    Entry.findAll({
+        attributes: [
+            'id',
+            'title',
+            'text',
+            'date',
+        ]
+    })
+    .then(entryData => res.json(entryData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
+router.get('/:id', async (req, res) => {
+    Entry.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'title',
+            'text',
+            'date',
+        ]
+    })
+    .then(entryData => res.json(entryData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
-router.put('/:id', async (req, res) => {
-    try {
-        const userEntry = await Entry.update(
-            {
-                title: req.body.title,
-                text: req.body.text,
-                date: req.body.date,
-                user: req.body.user_id
-            },
-            {
-                where: {
-                    id: req.params.id
-                },
-            }
-        );
-
-        res.status(200).json({ message: 'Your entry has updated' })
-    } catch (err) {
-        res.status(500).json({ message: 'Failed to update journal, try again' });
-    }
-})
-
-
+router.post('/', (req, res) => {
+    Entry.create({
+        title: req.body.title,
+        text: req.body.text,
+        user_id: req.session.user_id
+    })
+    .then(entryData => res.json(entryData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 router.delete('/:id', async (req, res) => {
     try {
@@ -55,14 +58,11 @@ router.delete('/:id', async (req, res) => {
                 },
             }
         );
-        res.status(200).json({ message: 'Your entry has updated' })
+        res.status(200).json({ message: 'Your entry has deleted' })
     } catch (err) {
         res.status(500).json({ message: 'Please try your delete request again' });
     }
 
 })
-
-
-
 
 module.exports = router
