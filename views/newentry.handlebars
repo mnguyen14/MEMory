@@ -1,16 +1,41 @@
-<form class="form new-post-form">
-  <div class="form-group">
-    <label for="post-title">Journal Entry</label>
-    <input class="form-input" type="text" id="entry-title" />
+<link rel="stylesheet" href="./css/newentry.css">
+
+<nav class="navbar navbar-dark" style="background-color:#3b5998;">
+<h1 class="navbar-brand">MEMory </h1>
+</nav>
+
+<form>
+
+  <div class="container-fluid">
+    <div class="col-8">
+      <div class="form-group">
+        <input type="title" class="form-control form-control-lg entry-title" id="entry-title" placeholder="Entry Title" required="required">
+      </div>
+
+      <div class="form-group text-class">
+        <label for="exampleFormControlTextarea1">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Write about what's on your mind or pick an optional journal prompt</option>
+            <option value="1">How did you take care of yourself today?</option>
+            <option value="2">A good thing that happened today was…</option>
+            <option value="3">What is something you’re grateful for?</option>
+            <option value="4">What is your intention for tomorrow?</option>
+            <option value="5">Pick something important to you. Why is it?</option>
+          </select>
+        </label>
+        <textarea class="form-control entry-textarea" id="text-area" rows="20" required="required"></textarea>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="entry">Entry</label>
-    <input class="form-input" type="text" id="entry" />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <button type="submit" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Submit Entry</button>
+      </div>
+    </div>
   </div>
-  <button type="Enter" class="btn">Enter</button>
+
 </form>
 
-<footer>
-  
-</footer>
 <script src="/js/addEntry.js"></script>
