@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
     Entry.create({
         title: req.body.title,
         text: req.body.text,
