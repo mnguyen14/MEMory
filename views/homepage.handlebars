@@ -1,38 +1,26 @@
-<link rel="stylesheet" href="../public/css/style.css"/>
+<link rel="stylesheet" href="../public/css/stylesheet.css">
 
-<nav class="navbar navbar-dark" style="background-color: #3b5998;">
-  <h1 class="navbar-brand">MEMory </h1>
-  <div class="logout">
-    <button class="btn btn-link">Log Out</button>
-  </div>
-</nav>
-
-<div class="welcomediv">
-  <h1 class="text-center">Welcome to MEMory</h1>
-  <h3 class="text-center">a unique way of gaining insight from your past to help create a brighter tomorrow.</h3>
-</div>
-
-<div class="d-grid gap-2 col-2 mx-auto">
-  <button class="btn btn-primary" id="createbtn">Create Entry</button>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-4 list-container">
-      <div class="card">
-        <ul class="list-group"></ul>
+<nav class="navbar navbar-dark">
+      <h1 class="navbar-brand"></h1>
+      <div class="logout">
+        <button class="btn btn-link">Log Out</button>
       </div>
-    </div>
-    <div class="col-8">
-      <input
-        class="note-title"
-        placeholder="Entry Title"
-        maxlength="28"
-        type="text"
-      />
-      <textarea class="note-textarea" placeholder="Entry text"></textarea>
+    </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="text-center">Welcome to MEMory</h1>
+      <h3 class="text-center">a unique way of gaining insight from your past to help create a brighter tomorrow.</h3>
     </div>
   </div>
+<br>
+  <div class="d-grid gap-2 col-1 mx-auto">
+    <button type="button" class="btn btn-primary btn-lg text-center align-center">+ New Entry</button>
+  </div>
+<br><br><br>
+<div class="list-group">
+  <p><b>Entry History:</b></p>
+  <a href="#" class="list-group-item list-group-item-action">10/24/21 - Out and About</a>
+  <a href="#" class="list-group-item list-group-item-action">10/16/21 - Crashed today...</a>
+  <a href="#" class="list-group-item list-group-item-action">10/09/21 - My Birthday!</a>
+  <a href="#" class="list-group-item list-group-item-action">9/27/21 - Road trip to Michigan</a>
 </div>
-    
-<script src="./assets/js/index.js"></script>
